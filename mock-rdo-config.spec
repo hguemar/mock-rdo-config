@@ -1,6 +1,6 @@
 Name:           mock-rdo-config
-Version:        0.1%{?dist}
-Release:        1%{?dist}
+Version:        0.1
+Release:        2%{?dist}
 Summary:        Additional Mock configuration for RDO
 
 License:        GPLv3
@@ -39,6 +39,9 @@ install -Dpm 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Thu Jun 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1-2
+- Fix mock config files
+
 * Tue Jun  7 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1-1
 - Initial package
 
