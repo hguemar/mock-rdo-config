@@ -1,14 +1,15 @@
 Name:           mock-rdo-config
 Version:        0.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Additional Mock configuration for RDO
 
 License:        GPLv3
 URL:            http://github.com/hguemar/mock-rdo-config
 Source0:        LICENSE
-Source1:        rdo-mitaka-el7.cfg
-Source2:        rdo-liberty-el7.cfg
-Source3:        rdo-kilo-el7.cfg
+Source1:        rdo-newton-el7.cfg
+Source2:        rdo-mitaka-el7.cfg
+Source3:        rdo-liberty-el7.cfg
+Source4:        rdo-kilo-el7.cfg
 
 
 BuildArch:      noarch
@@ -30,6 +31,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/mock/
 install -Dpm 644 %{SOURCE1} %{buildroot}%{_sysconfdir}/mock/
 install -Dpm 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/mock/
 install -Dpm 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/
+install -Dpm 644 %{SOURCE4} %{buildroot}%{_sysconfdir}/mock/
 
 
 %files
@@ -39,6 +41,9 @@ install -Dpm 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/
 
 
 %changelog
+* Tue Aug  2 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1-3
+- Add newton config
+
 * Thu Jun 16 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 0.1-2
 - Fix mock config files
 
